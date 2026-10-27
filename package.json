@@ -1,0 +1,40 @@
+{
+  "name": "cinema",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000S\u0000l\u0000o\u0000t\u0000L\u0000o\u0000c\u0000k\u0000\r\u0000 \u0000",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shubham6502/SlotLock.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Shubham6502/SlotLock/issues"
+  },
+  "homepage": "https://github.com/Shubham6502/SlotLock#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "@types/supertest": "^7.2.1",
+    "supertest": "^7.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "pg": "^8.23.1",
+    "redis": "^6.3.0",
+    "zod": "^4.6.7"
+  }
+}

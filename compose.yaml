@@ -1,0 +1,28 @@
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: slotlock-postgres
+    environment:
+      POSTGRES_DB: slotlock
+      POSTGRES_USER: slotlock
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  redis:
+    image: redis:8
+    container_name: slotlock-redis
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - redis_data:/data
+    command: ["redis-server", "--appendonly", "yes"]
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
